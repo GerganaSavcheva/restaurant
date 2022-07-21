@@ -36,3 +36,5 @@ C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcore
 C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcoreapp3.1\restaurant.pdb
 C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcoreapp3.1\restaurant.genruntimeconfig.cache
 C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcoreapp3.1\restaurant.csproj.CopyComplete
+C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcoreapp3.1\Razor\Views\Post\Filter.cshtml.g.cs
+C:\Users\geri\Desktop\project_restaurant\restaurant\restaurant\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
