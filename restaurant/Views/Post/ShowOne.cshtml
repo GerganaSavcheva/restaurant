@@ -1,0 +1,45 @@
+﻿@model Post
+
+@{
+    ViewData["Title"] = "ViewPost";
+}
+<div>
+    <h4>@Model.Restaurant.Name</h4>
+    <img src="~/restaurant_img.jpg" width="200" height="200" class="img-thumbnail" alt="Card image cap">
+    <br />
+    <div class="col">
+        <p class="row">Type: @Model.Restaurant.Type<p>
+        <p class="row">Work hours: @Model.Restaurant.WorkHours</p>
+        <p class="row">Phone: @Model.Restaurant.Phone</p>
+        <p class="row">Address: @Model.Restaurant.Address</p>
+        <p class="row">Empty seats: @Model.Restaurant.EmptySeats</p>
+        <p class="row">Menu: @Model.Restaurant.Menu</p>
+        <p class="row">Description: @Model.Description</p>
+    </div>
+
+
+    <div>
+        @if (TempData["GoToHomePage"] == null)
+        {
+
+            <a asp-action="Index">Back</a>
+
+        }
+        else
+        {
+           <div asp-action="Filter" asp-controller="Post">
+
+              <a asp-action="Filter" asp-controller="Post"
+                   asp-route-filterTypeAndsearchedWord=@TempData["filterTypeAndsearchedWord"]>Back</a>
+
+              <p>
+                  these two here don't work properly->
+                  <a href="javascript:void(0);" onclick="history.go(-1);">Back to Details</a>
+
+                  <a href="##" onClick="history.go(-1); return false;">Go back</a>
+              </p>
+           </div>
+        }
+
+    </div>
+</div>

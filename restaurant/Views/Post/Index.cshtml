@@ -1,1 +1,30 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity;
+@*@using restaurant.Data;*@
+@model List<Post>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the best reservation site</h1>
+    <div class="container row">
+        @if (Model.Count > 0)
+        {
+            foreach (var post in Model)
+            {
+                <div class="card m-1" style="width: 18rem;">
+                    <img class="card-img-top" src="~/restaurant_img.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@post.Restaurant.Name</h5>
+                        <p class="card-text">@post.Description</p>
+                        <p>Type: @post.Restaurant.Type</p>
+                        <a asp-action="ShowOne" asp-route-id="@post.Id" asp-controller="Post" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <h2>No posts for showing yet</h2>
+@*            <a asp-action=""  asp-controller="">Sign up</a>   //should redirect to 'sign up' page
+*@        }
+    </div>
+
+</div>

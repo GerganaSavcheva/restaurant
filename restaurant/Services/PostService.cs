@@ -17,9 +17,9 @@ namespace restaurant.Services
         {
             for (int i = 0; i < 4; i++)
             {
-                Restaurant restaurant = new Restaurant();
-                restaurant.Name = "re"+i;
-                restaurant.Phone = i+"";
+                Restaurant restaurant = new Restaurant("re"+i,i);
+                restaurant.Address = i + "";
+                restaurant.Type = "type";
 
                 Post post = new Post();
                 post.Restaurant = restaurant;
@@ -27,21 +27,45 @@ namespace restaurant.Services
             }
         }
 
+        public Post GetById(int id)
+        {
+            return dbContext_dbSetPost.FirstOrDefault(p => p.Id == id);
+        }
+
+        public  List<Post> GetAll()
+        {
+            return dbContext_dbSetPost;
+        }
+
         public List<Post> FilteredPosts(string filterType, string searchedWord) 
         {
             
             List<Post> filteredPosts = new List<Post>();
 
-            dbContext_dbSetPost.ForEach(delegate(Post p) {
-             object valueForComparison=   p.Restaurant.GetType()
-                .GetProperty(filterType).GetValue(p.Restaurant,null);
+            if (filterType== "Description")
+            {
+                dbContext_dbSetPost.ForEach(delegate (Post p) {
 
-                if (valueForComparison.Equals(searchedWord))
-                {
-                    filteredPosts.Add(p);
-                }
-                
-            });
+                    if (p.Description.ToLower().Contains(searchedWord.ToLower().ToString()))
+                    {
+                        filteredPosts.Add(p);
+                    }
+
+                });
+            }
+            else
+            {
+                dbContext_dbSetPost.ForEach(delegate (Post p) {
+                    object valueForComparison = p.Restaurant.GetType()
+                       .GetProperty(filterType).GetValue(p.Restaurant, null);
+
+                    if (valueForComparison.ToString().ToLower().Contains(searchedWord.ToLower().ToString()))
+                    {
+                        filteredPosts.Add(p);
+                    }
+
+                });
+            }
 
             return filteredPosts;
         }
