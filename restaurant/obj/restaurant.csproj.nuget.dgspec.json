@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\geri\\Desktop\\project_restaurant\\restaurant\\restaurant\\restaurant.csproj": {}
+    "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\geri\\Desktop\\project_restaurant\\restaurant\\restaurant\\restaurant.csproj": {
+    "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\geri\\Desktop\\project_restaurant\\restaurant\\restaurant\\restaurant.csproj",
+        "projectUniqueName": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj",
         "projectName": "restaurant",
-        "projectPath": "C:\\Users\\geri\\Desktop\\project_restaurant\\restaurant\\restaurant\\restaurant.csproj",
-        "packagesPath": "C:\\Users\\geri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\geri\\Desktop\\project_restaurant\\restaurant\\restaurant\\obj\\",
+        "projectPath": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj",
+        "packagesPath": "C:\\Users\\evgeni stanchev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\geri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\evgeni stanchev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,22 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
