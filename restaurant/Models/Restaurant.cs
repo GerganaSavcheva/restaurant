@@ -9,11 +9,7 @@ namespace restaurant.Models
 {
     public class Restaurant
     {
-        public Restaurant(string name, int capacity)
-        {
-            this.Name = name;
-            this.Capacity = capacity;
-        }
+        
         public Restaurant()
         {
 
@@ -23,7 +19,7 @@ namespace restaurant.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; private set; }
+        public string Name { get;  set; }
 
         [Required]
         public string Phone { get; set; }
@@ -41,7 +37,7 @@ namespace restaurant.Models
         public string Menu { get; set; }
 
         [Required]
-        public int Capacity { get; private set; }
+        public int Capacity { get;  set; }
 
         public int EmptySeats { get; set; } 
 

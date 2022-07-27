@@ -1,0 +1,24 @@
+﻿<form asp-action="Edit" asp-controller="Post">
+
+    <div class="form-outline form-white mb-4">
+        <label class="form-label" for="restaurantIdInput">Restaurant id</label>
+        <input type="text" class="form-control form-control-lg" name="id" />
+
+    </div>
+
+
+    <button class="btn btn-primary" type="submit">Edit</button>
+
+    <a asp-action="Index" asp-controller="Post" class="btn btn-primary">Cancel</a>
+
+    @if (TempData["noPostFound"] != null)
+    {
+        <p class="text-center" style="color:crimson">@TempData["noPostFound"]</p>
+
+    }
+    else if (TempData["editMessage"] != null)
+    {
+<p class="text-center" style="color:chartreuse">@TempData["editMessage"]</p>
+
+    }
+</form>

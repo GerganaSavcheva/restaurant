@@ -4996,19 +4996,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\evgeni stanchev\\.nuget\\packages\\": {}
+    "C:\\Users\\geri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj",
+      "projectUniqueName": "C:\\Users\\geri\\Source\\Repos\\restaurant_web_app\\restaurant\\restaurant.csproj",
       "projectName": "restaurant",
-      "projectPath": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\restaurant.csproj",
-      "packagesPath": "C:\\Users\\evgeni stanchev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\evgeni stanchev\\Source\\Repos\\restaurantg_web_app\\restaurant\\obj\\",
+      "projectPath": "C:\\Users\\geri\\Source\\Repos\\restaurant_web_app\\restaurant\\restaurant.csproj",
+      "packagesPath": "C:\\Users\\geri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\geri\\Source\\Repos\\restaurant_web_app\\restaurant\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\evgeni stanchev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\geri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5067,7 +5067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

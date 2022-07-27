@@ -26,9 +26,9 @@ namespace restaurant
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DBRContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("RestaurantCon")); });
             services.AddControllersWithViews();
-            services.AddSingleton< PostService>();
+            services.AddScoped< PostService>();
+            services.AddDbContext<DBRContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("RestaurantCon")); });
 
         }
 
