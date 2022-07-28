@@ -39,7 +39,7 @@ namespace restaurant.Services
         {
             Post oldPost = GetById(post.Id);
             oldPost.Description = post.Description;
-       //     restaurantService.Edit(post.Restaurant);
+       //     restaurantService.Edit(post.Restaurant); 
             oldPost.Restaurant.Name = post.Restaurant.Name;
             oldPost.Restaurant.Phone = post.Restaurant.Phone;
             oldPost.Restaurant.Address = post.Restaurant.Address;
@@ -47,7 +47,7 @@ namespace restaurant.Services
             oldPost.Restaurant.WorkHours = post.Restaurant.WorkHours;
             oldPost.Restaurant.Menu = post.Restaurant.Menu;
             oldPost.Restaurant.Capacity = post.Restaurant.Capacity;
-            ////oldPost.Restaurant.EmptySeats = post.Restaurant.Capacity;
+            oldPost.Restaurant.EmptySeats = post.Restaurant.Capacity;
             dbrContext.SaveChanges();
         }
         public Post GetById(int id)

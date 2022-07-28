@@ -38,21 +38,6 @@ namespace restaurant.Services
             dbrContext.SaveChanges();
         }
 
-        public void AddEmptySeats(int id, int vacantSeats)
-        {
-            Restaurant oldRestaurant = GetById(id);
-            oldRestaurant.EmptySeats += vacantSeats;
-
-            dbrContext.SaveChanges();
-        }
-
-        public void RemoveEmptySeats(int id, int takenSeats)
-        {
-            Restaurant oldRestaurant = GetById(id);
-            oldRestaurant.EmptySeats -= takenSeats;
-
-            dbrContext.SaveChanges();
-        }
 
         public Restaurant GetById(int id)
         {

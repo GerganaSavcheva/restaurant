@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using restaurant.Models;
 using restaurant.Services;
-using restaurant.Data;
+using restaurant.Areas.Identity.Data;
 using System;
+using System.Security.Claims;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace restaurant.Controllers
 {
@@ -13,6 +16,7 @@ namespace restaurant.Controllers
     {
         private PostService postService;
         private List<Post> filteredPosts;
+
 
         public PostController(PostService postService)
         {
@@ -115,6 +119,7 @@ namespace restaurant.Controllers
             return RedirectToAction(nameof(Create));
         }
 
+
         [HttpGet]
         public IActionResult Delete()
         {           
@@ -137,6 +142,7 @@ namespace restaurant.Controllers
             TempData["deleteMessage"] = "Successfully deleted post!";
             return RedirectToAction(nameof(Delete));
         }
+
 
         [HttpGet]
         public IActionResult SelectPostEdit()
