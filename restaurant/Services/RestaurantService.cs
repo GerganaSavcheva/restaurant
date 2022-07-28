@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using restaurant.Data;
 using restaurant.Models;
+using restaurant.Models.ViewModels;
 
 namespace restaurant.Services
 {
@@ -38,10 +40,18 @@ namespace restaurant.Services
             dbrContext.SaveChanges();
         }
 
-
         public Restaurant GetById(int id)
         {
             return dbrContext.restaurants.FirstOrDefault(p => p.Id == id);
+        }
+
+        public async Task<List<RestaurantViewModel>> GetAll()
+        {
+            return await dbrContext.restaurants.Select(s => new RestaurantViewModel
+            {
+                Id = s.Id,
+                Name = s.Name
+            }).ToListAsync();
         }
     }
 }

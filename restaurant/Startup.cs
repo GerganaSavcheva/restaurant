@@ -28,7 +28,9 @@ namespace restaurant
         {
             services.AddRazorPages();
             services.AddControllersWithViews();
-            services.AddScoped< PostService>();
+            services.AddScoped<PostService>();
+            services.AddScoped<CommentService>();
+            services.AddScoped<RestaurantService>();
             services.AddDbContext<DBRContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("RestaurantCon")); });
 
         }

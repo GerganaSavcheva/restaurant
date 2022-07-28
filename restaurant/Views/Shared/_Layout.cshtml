@@ -25,12 +25,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Comment">Comment</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Filter">Search</a>
                         </li>
-                        @if (this.signinManager.IsSignedIn(User) && this.signinManager.UserManager.GetUserName(User)== "restaurant@admin.com")
+                        @if (this.signinManager.IsSignedIn(User) && this.signinManager.UserManager.GetUserName(User) == "restaurant@admin.com")
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Create">create</a>
@@ -42,8 +45,8 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="SelectPostEdit">edit</a>
                             </li>
                         }
-                            <partial name="_LoginPartial" />
-                        </ul>
+                        <partial name="_LoginPartial" />
+                    </ul>
                 </div>
             </div>
         </nav>

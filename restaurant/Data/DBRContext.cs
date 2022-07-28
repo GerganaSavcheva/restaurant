@@ -8,6 +8,8 @@ namespace restaurant.Data
         public DbSet<Restaurant> restaurants { get; set; }
 
         public DbSet<Post> posts { get; set; }
+
+        public DbSet<Comment> comment { get; set; }
         public DBRContext(DbContextOptions<DBRContext> options) : base(options)
         {
 
