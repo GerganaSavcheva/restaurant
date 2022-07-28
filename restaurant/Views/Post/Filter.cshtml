@@ -1,0 +1,59 @@
+﻿@model List<Post>
+<form asp-action="Filter" asp-controller="Post">
+
+    <label class="form-label">find by</label>
+    <select class="form-outline custom-select form-white mb-4" aria-label="Default select example" name="filterType">
+        @*@if (TempData["filterType"] != null)
+        {
+        <option selected value=@TempData["filterType"]>@TempData["filterType"]</option>
+        }
+        else
+        {*@
+            <option selected value=" ">Select one</option>
+            <option value="Name">Name</option>
+            <option value="Type">Type</option>
+            <option value="Address">Address</option>
+            <option value="Description">Description</option>
+        
+    </select>
+
+    <div class="form-outline form-white mb-4">
+        <label class="form-label">search</label>
+        <input type="text" class="form-control form-control-lg" name="searchedWord" />
+
+    </div>
+ 
+    <button type="submit" class="btn btn-info btn-fill btn-wd"
+            asp-param-filterType="filterType" ,asp-param-searchedWord="searchedWord">
+        GO
+    </button>
+</form>
+
+
+
+<div class="container row">
+    @if (Model.Count > 0)
+    {
+        foreach (var post in Model)
+        {
+            <div class="card m-1" style="width: 18rem;">
+                <img class="card-img-top" src="~/restaurant_img.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@post.Restaurant.Name</h5>
+                    <p class="card-text">@post.Description</p>
+                    <a asp-action="ShowOne" asp-route-id="@post.Id" asp-route-searchedWord=@TempData["searchedWord"] asp-route-filterType=@TempData["filterType"] asp-controller="Post" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        }
+    }
+    else if (TempData["nullReferenceMessage"] != null)
+    {
+        <p class="text-center" style="color:crimson">@TempData["nullReferenceMessage"]</p>
+
+    }
+    else if (TempData["noRestaurantFoundMessage"] != null)
+    {
+<p class="text-center" style="color:crimson"> @TempData["noRestaurantFoundMessage"]</p>
+
+    }
+</div>

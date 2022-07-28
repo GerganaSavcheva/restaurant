@@ -20,7 +20,7 @@ namespace restaurant.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction(nameof(Index), "Post");
         }
 
         public IActionResult Privacy()

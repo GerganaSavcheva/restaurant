@@ -1,0 +1,72 @@
+﻿
+    <form asp-action="Create" asp-controller="Post">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+
+                                <h2 class="fw-bold mb-2 text-uppercase">Create new Post</h2>
+                                @if (TempData["createFailed"] != null)
+                                {
+                                    <p class="text-center" style="color:crimson">@TempData["createFailed"]</p>
+
+                                }
+                                else if(TempData["createMessage"] != null)
+                                {
+                                    <p class="text-center" style="color:chartreuse">@TempData["createMessage"]</p>
+
+                                } 
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantNameInput">Restaurant Name</label>
+                                    <input type="text" id="restaurantNameInput" class="form-control form-control-lg" name="restaurant.name" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantPhoneInput">Restaurant Phone</label>
+                                    <input type="text" id="restaurantPhoneInput" class="form-control form-control-lg" name="restaurant.phone" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantAddressInput">Restaurant Address</label>
+                                    <input type="text" id="restaurantAddressInput" class="form-control form-control-lg" name="restaurant.address" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantTypeInput">Restaurant Type</label>
+                                    <input type="text" id="restaurantTypeInput" class="form-control form-control-lg" name="restaurant.type" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantWorkHoursInput">Restaurant WorkHours</label>
+                                    <input type="text" id="restaurantWorkHoursInput" class="form-control form-control-lg" name="restaurant.workHours" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantMenuInput">Restaurant Menu</label>
+                                    <input type="text" id="restaurantMenuInput" class="form-control form-control-lg" name="restaurant.menu" />
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="restaurantCapacityInput">Restaurant Capacity</label>
+                                    <input type="text" id="restaurantCapacityInput" class="form-control form-control-lg" name="restaurant.capacity" />
+                                </div>
+
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="description">Description</label>
+                                    <input type="text" id="description" class="form-control form-control-lg" name="description" />
+                                </div>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Create</button>
+                                <button class="btn btn-outline-light btn-lg px-5" asp-action="Index" asp-controller="Post">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
