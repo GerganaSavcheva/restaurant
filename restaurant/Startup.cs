@@ -11,6 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.UI;
 
 namespace restaurant
 {
@@ -29,7 +32,15 @@ namespace restaurant
             services.AddControllersWithViews();
             services.AddScoped< PostService>();
             services.AddDbContext<DBRContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("RestaurantCon")); });
-
+            services.AddIdentity<IdentityUser,IdentityRole>(options=>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+            })
+              //  .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<DBRContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +62,7 @@ namespace restaurant
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

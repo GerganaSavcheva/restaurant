@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace restaurant.Controllers
 {
@@ -94,7 +95,7 @@ namespace restaurant.Controllers
             return View(filteredPosts);
         }
 
-
+        [Authorize(Roles ="Admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -115,6 +116,7 @@ namespace restaurant.Controllers
             return RedirectToAction(nameof(Create));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Delete()
         {           
@@ -138,6 +140,8 @@ namespace restaurant.Controllers
             return RedirectToAction(nameof(Delete));
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult SelectPostEdit()
         {

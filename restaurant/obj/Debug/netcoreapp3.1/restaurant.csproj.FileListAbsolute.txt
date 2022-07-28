@@ -164,3 +164,10 @@ C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\obj\Debug\netcoreapp3.1
 C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs
 C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
 C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\obj\Debug\netcoreapp3.1\Razor\Views\Post\SelectPostEdit.cshtml.g.cs
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\restaurant.StaticWebAssets.xml
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\geri\Source\Repos\restaurant_web_app\restaurant\obj\Debug\netcoreapp3.1\restaurant.MvcApplicationPartsAssemblyInfo.cs
